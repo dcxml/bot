@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>6bot - Ustawienia</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="section">
+    <div class="sectionHeader btn">Informacje o Tobie</div>
+      
+    <div class="sectionContent">
+      <div class="setting">
+        <div class="settingHeader">Płeć</div>
+        <div class="settingContent">
+          <span>K</span><input id="u_sex" class="switch" type="range" min="0" max="1" step="1"><span>M</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Wiek</div>
+        <div class="settingContent">
+          <input id="u_age" min="3" max="100" type="number">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Zboczony/a</div>
+        <div class="settingContent">
+          <span>NIE</span><input id="u_zb" class="switch" type="range" min="0" max="1" step="1"><span>TAK</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Imię</div>
+        <div class="settingContent">
+          <input id="u_name" class="message" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">Kryteria wyszukiwania</div>
+
+    <div class="sectionContent">
+      <div class="setting">
+        <div class="settingHeader">Płeć</div>
+        <div class="settingContent">
+          <span>K</span><input id="o_sex" class="switch" type="range" min="0" max="1" step="0.5"><span>M</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Wiek minimalny</div>
+        <div class="settingContent">
+          <input id="o_age_min" min="0" max="100" type="number">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Wiek maksymalny</div>
+        <div class="settingContent">
+          <input id="o_age_max" min="0" max="100" type="number">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Zboczony/a</div>
+        <div class="settingContent">
+          <span>NIE</span><input id="o_zb" class="switch" type="range" min="0" max="1" step="0.5"><span>TAK</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">Rozmowa</div>
+    <div class="sectionContent">
+      <div class="settingHeader" style="cursor: help;" title="Możesz użyć poniższych zmiennych w wiadomościach:&#10;$p - Płeć (k/m)&#10;$w - Wiek&#10;$z - Zboczony/a (tak/nie)&#10;$i - Imię&#10;$* - pełna informacja (np. 'm 18 zb', lub 'k 24', albo 'Jan 23')&#10;$$ - znak $&#10;$| - separator alternatyw, możesz nim oddzielić alternatywne wersje wiadomości, a 6bot będzie losował której użyć">ℹ️</div>
+      <div class="setting">
+        <div class="settingHeader">Powitanie</div>
+        <div class="settingContent">
+          <input id="c_greeting" class="message" type="text">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Wiadomość po weryfikacji</div>
+        <div class="settingContent">
+          <input id="c_final" class="message" type="text">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Przeprowadzaj weryfikację</div>
+        <div class="settingContent">
+          <span>NIE</span><input id="c_verify" class="switch" type="range" min="0" max="1" step="1"><span>TAK</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Zakończ rozmowę nawet po udanej weryfikacji</div>
+        <div class="settingContent">
+          <span>NIE</span><input id="c_disconnect" class="switch" type="range" min="0" max="1" step="1"><span>TAK</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Wysyłaj powód odrzucenia rozmówcy</div>
+        <div class="settingContent">
+          <span>NIE</span><input id="c_feedback" class="switch" type="range" min="0" max="1" step="1"><span>TAK</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Opóźnienie mięzdy znakami [ms]</div>
+        <div class="settingContent">
+          <input id="c_delay" min="0" max="200" step="10" type="number">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Czas reakcji [ms]</div>
+        <div class="settingContent">
+          <input id="c_reactionTime" min="0" max="3000" step="100" type="number">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Maksymalny czas weryfikacji [s]</div>
+        <div class="settingContent">
+          <input id="c_timeout" min="5" max="180" step="5" type="number">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">Captcha</div>
+      
+    <div class="sectionContent">
+      <div class="setting">
+        <div class="settingHeader">Limit prób</div>
+        <div class="settingHeader" style="cursor: help;" title="Jeśli nie uda się poprawnie odczytać captchy, 6bot kliknie przycisk 'Zmień obrazek'. Za pomocą tego ustawienia możesz powiedzieć po ilu nieudanych próbach 6bot ma się poddać i poprosić o ręczne wprowadzenie kodu.&#10;0 - brak ograniczeń">ℹ️</div>
+        <div class="settingContent">
+          <input id="captcha_tries" min="0" max="999" type="number">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Wykorzystuj uczenie maszynowe</div>
+        <div class="settingContent">
+          <span>NIE</span><input id="captcha_use_ml" class="switch" type="range" min="0" max="1" step="1"><span>TAK</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Model uczenia maszynowego</div>
+        <div class="settingHeader" style="cursor: help;" title="Dostępne są 2 modele:&#10;Stable - rozwija się powoli, ale na bardzo pewnych danych&#10;Community - ma większy potencjał rozwoju, ale bazuje na danych od użytkowników (których poprawności nie można w 100% zagwarantować)">ℹ️</div>
+        <div class="settingContent">
+          <span>Stable</span><input id="captcha_ml_model" class="switch" type="range" min="0" max="1" step="1"><span>Community</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Wysyłaj captche do uczenia maszynowego</div>
+        <div class="settingContent">
+          <span>NIE</span><input id="captcha_feed_ml" class="switch" type="range" min="0" max="1" step="1"><span>TAK</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">Historia</div>
+      
+    <div class="sectionContent">
+      <div class="setting">
+        <div class="settingHeader">Minimalna ilość wiadomości w rozmowie</div>
+        <div class="settingContent">
+          <input id="history_min_length" min="0" max="100" type="number">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Maksymalna ilość przechowywanych rozmów</div>
+        <div class="settingContent">
+          <input id="history_max_amount" min="0" max="10000" type="number">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Ilość dni przez które rozmowy będą przechowywane</div>
+        <div class="settingContent">
+          <input id="history_max_duration" min="0" max="365" type="number">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">AntiSpam</div>
+      
+    <div class="sectionContent">
+      <div class="setting">
+        <div class="settingHeader">Próg podobieństwa</div>
+        <div class="settingHeader" style="cursor: help;" title="Im wyższy, tym mniej słów będzie się kwalifikowało jako SPAM. Niższy może z kolei powodować więcej błędnych wykryć.">ℹ️</div>
+        <div class="settingContent">
+          <span>50%</span><input style="width: 50%;" id="as_threshold" class="switch" type="range" min="0.5" max="1" step="0.01"><span>100%</span>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Przekazuj wiadomości otrzymane w trakcie weryfikacji</div>
+        <div class="settingContent">
+          <span>NIE</span><input id="as_feed" class="switch" type="range" min="0" max="1" step="1"><span>TAK</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div clss="section">
+    <div class="sectionHeader btn">Pytania</div>
+
+    <div class="sectionContent">
+      <div class="setting">
+        <div class="settingHeader">Płeć</div>
+        <div class="settingContent">
+          <input id="q_name" class="message" type="text">
+        </div>
+      </div>
+      <div class="setting">
+        <div class="settingHeader">Wiek</div>
+        <div class="settingContent">
+          <input id="q_age" class="message" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer">
+    6bot by chaueq
+    <br>
+    Dołącz do <a target="_blank" href="https://discord.gg/8F3RnX7bjm">serwera discord</a> aby zgłaszać problemy i decydować o rozwoju 6bota 😉
+  </p>
+
+  <script src="../lib/data.js"></script>
+  <script src="../lib/settings.js"></script>
+
+  <script src="settings.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>6bot - Pomoc</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="stage">
+        <p class="head_text">Czy masz pewność, że rozwiązanie Twojego problemu nie jest zawarte w FAQ?</p>
+        <div class="btn st1_yes">TAK</div>
+        <div class="btn st1_no">NIE</div>
+    </div>
+    <div class="stage">
+        <p class="head_text">Na czym polega problem?</p>
+        <textarea class="description"></textarea>
+        <div class="btn next">DALEJ</div>
+    </div>
+    <div class="stage">
+        <p class="head_text">Jakie informacje chcesz dołączyć do zgłoszenia?</p>
+        <div class="options">
+            <div class="option" style="padding-right: 4.25ch;">
+                <input type="checkbox" checked>
+                <span>Ustawienia</span>
+            </div>    
+            <div class="option">
+                <input type="checkbox">
+                <span>Historia rozmów</span>
+            </div> 
+        </div>
+        <div id="start" class="btn next">DALEJ</div>
+    </div>
+    <div class="stage">
+        <p class="head_text">Trwa przygotowywanie i szyfrowanie Twojego zgłoszenia…</p>
+        <div class="progress"><div></div></div>
+    </div>
+    <div class="stage">
+        <p class="head_text">Twoje zgłoszenie jest gotowe!</p>
+        <p class="sub_text">Jeśli nie zostało pobrane automatycznie, użyj przycisku poniżej i prześlij je przez Discord lub mailem, klikając wybraną ikonę poniżej.<br>Możesz spokojnie umieścić je na publicznym kanale, ponieważ jest zaszyfrowane i nikt poza twórcą oprogramowania nie da rady go odczytać.</p>
+        <a id="download">
+            <div class="btn">POBIERZ</div>
+        </a>
+        <a href="https://discord.gg/GW3vtBctHK" target="_blank">
+            <img src="/media/discord.svg" class="icon">
+        </a>
+        <a href="mailto:software@chaueq.dev" target="_blank">
+            <div class="icon">✉️</div>
+        </a>
+    </div>
+
+    <p class="footer">
+        6bot by chaueq
+        <br>
+        Dołącz do <a target="_blank" href="https://discord.gg/8F3RnX7bjm">serwera discord</a> aby zgłaszać problemy i decydować o rozwoju 6bota 😉
+    </p>
+
+    <script src="../lib/3rd_party/openpgp.min.js"></script>
+    <script src="../lib/crypto.js"></script>
+    <script src="../lib/data.js"></script>
+    <script src="../lib/settings.js"></script>
+    <script src="../lib/antispam.js"></script>
+    <script src="../lib/history.js"></script>
+
+    <script src="help.js"></script>
+</body>
+
+</html>

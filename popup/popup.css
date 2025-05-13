@@ -1,0 +1,87 @@
+:root {
+    --background: rgb(10, 10, 10);
+    --inactive-bg: rgb(48, 51, 53);
+    --inactive-border: rgb(60, 63, 66);
+    --text: rgb(240, 240, 240);
+    --text-highlight: #DCB000;
+    --active-bg: #182E44;
+    --active-border: #DCB000;
+}
+
+body {
+    background-color: var(--background);
+    text-align: center;
+    color: var(--text);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 240px;
+    height: 300px;
+}
+
+hr {
+    border-color: var(--active-bg);
+    
+}
+
+.hdr {
+    height: 48px;
+}
+
+.hdr_title {
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--text-highlight);
+    line-height: 32px;
+}
+
+.hdr_version {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 2px;
+}
+
+.buttons_holder {
+    width: 240px;
+    height: 240px;
+    padding-left: 4px;
+    padding-right: 4px;
+}   
+
+.btn {
+    height: 96px;
+    width: 96px;
+    background-color: var(--inactive-bg);
+    border-color: var(--inactive-border);
+    border-radius: 1px;
+    border-style: solid;
+    float: left;
+    margin: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: var(--active-bg);
+    color: var(--active-border);
+    border-color: var(--active-border);
+}
+
+.btn_icon {
+    width: 72px;
+    height: 72px;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 0;
+    font-size: 56px;
+}
+
+.btn_title {
+    margin-top: 2px;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+}

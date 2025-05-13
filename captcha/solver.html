@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="solver.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <title>Darwin captcha</title>
+</head>
+<body>
+    <div class="scene">
+        <div id="amount"></div>
+        <div id="image"></div>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="solution"/>
+    </div>
+    <div class="scene hidden" id="access">
+        <div class="title">API KEY</div>
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="password" id="apikey"/>
+    </div>
+    <script src="solver.js"></script>
+</body>
+</html>

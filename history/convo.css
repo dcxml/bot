@@ -1,0 +1,59 @@
+:root {
+    --box-border: rgb(10, 10, 10);
+    --background: #0a0a0a;
+    --box-bg: rgb(80, 86, 92);
+    --border: rgb(60, 63, 66);
+    --text: #101010;
+    --ty-bg: #6792D6;
+    --obcy-bg: #A0B85A;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: var(--background);
+    text-align: center;
+    color: var(--text);
+    margin: 0;
+    overflow: hidden;
+}
+
+.chat {
+    background-color: var(--box-bg);
+    width: 90vw;
+    height: 95vh;
+    position: absolute;
+    top: calc(2.5vh - 1vmin);
+    left: calc(5vw - 1vmin);
+    border-radius: 1vmax;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1vmin;
+}
+
+.msg {
+    max-width: 80vw;
+    min-height: 3vh;
+    font-size: 2vh;
+    line-height: 3vh;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    padding: 1vmin;
+    border-radius: 20px;
+}
+
+.ty {
+    float: right;
+    clear: both;
+    text-align: right;
+    background-color: var(--ty-bg);
+}
+
+.obcy {
+    float: left;
+    clear: both;
+    text-align: left;
+    background-color: var(--obcy-bg);
+}

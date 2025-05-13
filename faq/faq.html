@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>6bot - FAQ</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="section">
+    <div class="sectionHeader btn">Jak rozpocząć używanie 6bota?</div>
+    <div class="sectionContent">
+      <ol>
+        <li>
+          <p>Przed rozpoczęciem korzystania, musisz dostarczyć botowi informacji o tym jak chcesz żeby działał. W tym celu kliknij na ikonkę rozszerzenia (warto ją sobie <a href="https://www.wikihow.com/Pin-Extensions-in-Chrome" target="_blank">przypiąć</a>, dla łatwiejeszego dostępu). Następnie z menu wybierz ustawienia</p>
+          <img src="img/settings-icon.png">
+        </li>
+        <li>
+          <p>Wprowadź informacje o sobie. Tylko w ten sposób bot będzie mógł Cię należycie reprezentować i odpowiadać na pytania zgodnie z prawdą. Kliknij na "Informacje o Tobie" aby rozwinąć tę kategorię ustawień i wybierz swoją płeć oraz wpisz wiek. W następnym polu zatytuowanym "Zboczony/a" możesz określić, czy używasz portalu 6obcy w celu interakcji o charakterze seksualnym. W polu imię możesz wpisać swoje imię. Możesz też pozostawić je puste, a wtedy bot zapytany o twoje imię odmówi odpowiedzi.</p>
+          <img src="img/settings-about-you.png">
+        </li>
+        <li>
+          <p>Daj botowi znać z kim chcesz rozmawiać. Określ jaka płeć i zakres wiekowy (włącznie) Cię interesuje, oraz czy chcesz aby Twój rozmówca był otwarty lub niechętny do interakcji seksualnych. Jeśli nie masz mocno określonych preferencji, pierwsze i ostatnie pole możesz ustawić w pozycji neutralnej (suwak na środku). Wtedy bot będzie ignorował dane kryterium i nikogo przez nie nie zdyskfalifikuje.</p>
+          <img src="img/settings-search.png">
+        </li>
+        <li>
+          <p>Określ w jaki sposób bot ma rozmawiać z innymi użytkownikami. Ta sekcja ustawień posiada najwięcej pól i jest najbardziej skomplikowana. Przejdźmy więc przez wszystkie po kolei.</p>
+            <p>Na samej górze zobaczyć możesz ikonkę "i". Po najechaniu na nią zobaczysz informacje o specjalnych wartościach, które możesz wstawić do wiadomości, a bot sam je zinterpretuje.</p>
+            <img src="img/settings-convo-lang.png">
+            <br>
+            <p>"Powitanie" to wiadomość wysyłana od razu po rozpoczęciu rozmowy. Najlepiej skorzystać tutaj z jednego z operatorów przedstawionych w poprzednim punkcie i zdefiniować wiele alternatywnych wiadomości (oddzielonych $|), tak jak w wartości domyślnej.</p>
+            <img src="img/settings-convo-powitanie.png">
+            <br>
+            <p>"Wiadomość po weryfikacji" to wiadomość, która zostanie wysłana od razu po stwierdzeniu przez bota, że rozmówca spełnia zdefiniowane przez Ciebie kryteria. Wiadomość ta zostanie wysłana zanim bot powiadomi Cię, że znalazł dla Ciebie rozmówcę, lub zanim zakończy rozmowę (patrz następne pole). Jeśli to pole pozostawisz puste, bot nie wyśle żadnej wiadomości na koniec.</p>
+            <img src="img/settings-convo-postverifmsg.png">
+            <br>
+            <p>"Zakończ rozmowę nawet po udanej weryfikacji" to pole, które powstało z myślą o tych, którzy wolą prowadzić konwersacje na innej platformie. Jeśli zostanie ustawione na TAK, po upewnieniu się, że rozmówca spełnia Twoje oczekiwania, bot wyśle mu wiadomość określoną w poprzednim polu i zakończy rozmowę.</p>
+            <img src="img/settings-convo-disconnect.png">
+            <br>
+            <p>Jeśli ustawisz pole "Wysyłaj powód odrzucenia rozmówcy" na TAK, za każdym razem gdy rozmówca nie spełni zdefiniowanych oczekiwań, bot w ramach ostatniej wiadomości wyśle mu feedback z przyczyną odrzucenia (np. "nie interesuje mnie ta płeć"). Funkcja ta powinna być używana tylko w przypadku gdyby bot odrzucał kogoś nieprawidłowo, aby dowiedzieć się które kryterium nie działa poprawnie. Używanie tej funkcji może doprowadzić do shadow-bana, więc lepiej zostawić ją wyłączoną (ustawioną na NIE).</p>
+            <img src="img/settings-convo-feedback.png">
+            <br>
+            <p>Pola "Opóźnienie między znakami" i "Czas reakcji" określają jak szybko bot ma pisać wiadomości. "Opóźnienie między znakami" daje możliwość regulowania samej prędkości pisania, a "Czas reakcji" to czas, który bot odczekuje przed rozpoczęciem pisania każdej wiadomości. Dla początkujących użytkowników polecam pozostawienie wartości domyślnych, ale później warto się tymi ustawieniami pobawić, żeby uzyskać bardziej naturalne dla siebie tempo pisania.</p>
+            <img src="img/settings-convo-delays.png">
+            <br>
+            <p>Używając portalu 6obcy czasem trafisz na ludzi, którzy rozpoczynają rozmowę i odchodzą od komputera nie kończąc jej. Pole "Maksymalny czas weryfikacji" chroni bota przed czekaniem w nieskończoność aż wrócą. Jeśli wstępna rozmowa zajmuje dłużej niż określony czas, bot kończy rozmowę.<br>UWAGA: Minimalny dopuszczalny czas trwania rozmowy na 6obcy to 5 sekund. Ustawienie w tym polu wartości mniejszej niż 5 sprawi, że bot będzie działał nieprawidłowo.</p>
+            <img src="img/settings-convo-maxtime.png">
+          </li>
+          <li>
+            <p>6bot jest wyposażony w mechanizm automatycznego rozwiązywania captchy. Proces ten jest jednak skomplikowany i bot czasem potrzebuje na to kilku, a nawet kilkunastu prób. W polu "Limit prób" w sekcji "Captcha" możesz określić po ilu próbach bot ma się poddać i powiadomić Cię o konieczności rozwiązania captchy ręcznie. Jeśli wpiszesz tu 0, bot nigdy się nie podda (co jest zalecane, bo zawsze prędzej czy później mu się udaje).</p>
+            <img src="img/settings-captcha.png">
+          </li>
+          <li>
+            <p>Bot jest również wypposażony w mechanizm zapisywania rozmów, aby można było później do nich wracać. W sekcji "Historia" możesz dopasoać jak długie rozmowy będą zapisywane, ile ma ich być maksymalnie w pamięci, a także po jakim czasie mają być automatycznie usuwane. Ostatnie 2 pola dotyczą tylko rozmów zapisanych automatycznie. Jeśli dodasz rozmowę do "Zapisanych", będzie ona w pamięci komputera aż ją usuniesz.</p>
+            <img src="img/settings-history.png">
+          </li>
+          <li>
+            <p>6bot stara się również odrzucać rozmówców rozsyłających SPAM. Posiada wbudowaną bazę wzorów i fraz wykorzystywaną przez SPAMerów, ale wykrywa także wykorzystanie fraz przypominających te z wbudowanej bazy. To jak bardzo podobne słowa ma wykrywać, możesz zdefiniować za pomocą ustawienia "Próg podobieństwa". Jest to jednak zalecane tylko dla zaawansowanych użytkowników.</p>
+            <img src="img/settings-antispam.png">
+          </li>
+          <li>
+            <p>Wszystko gotowe! Teraz wystarczy, że wejdziesz na <a href="https://6obcy.org/rozmowa" target="_blank">6obcy</a> i klikniesz na ikonkę głowy robota w lewym dolnym rogu, aby uruchomić bota.</p>
+            <img src="img/launch-icon.png">
+            <p>Wygląd ikonki może się różnić w zależności od systemu operacyjnego.</p>
+          </li>
+      </ol>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">Dlaczego 6bot nie wysyła żadnych wiadomości?</div>
+    <div class="sectionContent">
+      <p>Oto najczęstrze przyczyny tego problemu:</p>
+      <ol>
+        <li>
+          <p>Bot nie został uruchomiony. Pamiętaj, że aby zaczął działać za każdym razem jak otwierasz okno rozmowy na 6obcy, musisz włączyć bota klikając na ikonkę głowy robota w lewym dolnym rogu.</p>
+          <img src="img/launch-icon.png">
+        </li>
+        <li>
+          <p>W ustawieniu "Maksymalny czas weryfikacji" została podana wartość mniejsza niż 5. 5 sekund to minimalny czas rozmowy dopuszczany przez 6obcy, więc wartość ta nie może być mniejsza.</p>
+          <img src="img/settings-convo-maxtime.png">
+        </li>
+        <li>
+          <p>Masz włączonego ad-blocka. Spokojnie, 6bot usunie dla Ciebie banery reklamowe z głównego interfejsu, ale jako darmowe oprogramowanie wrzuci swój mały baner na ekran z captchą. Jeśli ten baner nie będzie się wyświetlać, 6bot wyświetli poniższy komunikat i odmówi działania.</p>
+          <img src="img/adblock.png">
+          <p>Wyłącz adblocka, odśwież stronę i spróbuj ponownie.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">Czym jest shadowban i jak go uniknąć?</div>
+    <div class="sectionContent">
+        <p>Shadow-ban to mechanizm bezpieczeństwa zastosowany na portalu 6obcy. Zapobiega on wykorzystywaniu portalu do wysyłki SPAMu. Działa to w ten sposób, że użytkownicy zachowujący się jak boty, są skierowywani do osobnej przestrzeni rozmów i przestają być parowani z innymi użytkownikami. Jedyni rozmówcy, z którymi parowany jest zbanowany użytkownik, to boty udające użytkowników, ale najczęściej niezdolne do prowadzenia rozmów.</p>
+        <p>
+          Aby uniknąć shadow-bana:<br>
+          <ol>
+            <li>Unikaj powtarzalnych wiadomości. Im większa różnorodność zachowania 6bota, tym mniejsza szansa, że zostaniesz zbanowany. Możesz osiągnąć to wymyślając oryginalne wiadomości oraz używając operatora alternatywy $| aby zdefiniować różne warianty wiadomości, z pośród których 6bot będzie losowo wybierał za każdym razem.</li>
+            <li>Nie wysyłaj linków, namiarów na social media itd. (przynajmniej w początkowej fazie rozmowy).</li>
+            <li>Staraj się prowadzić długie rozmowy. Zmniejszają one ryzyko zostania sklasyfikowanym jako bot.</li>
+            <li>Nie używaj wylgaryzmów i innych niegrzecznych sformułowań. Twoje wiadomości sa analizowane i mogą poskutkować nałożeniem bana.</li>
+          </ol>
+        </p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">Czy można skonfigurować 6bota tak, żeby wysyłał jedną wiadomość i się rozłączał?</div>
+    <div class="sectionContent">
+        <p>6bot jest oprogramowaniem służącym do wyszukiwania pasujących nam rozmówców, a nie do rozsyłania SPAMu. W związku z tym nie została w nim umieszczona funkcjonalność rozsyłania pojedynczych wiadomości i nie zostanie ona wdrożona w przyszłości.<br>Możliwe, iż istnieją sposoby skonfigurowania 6bota w taki sposób, ale będą one sukcesywnie usuwane, aby zapobiegać wysyłce SPAMu. Dodatkowo zachowanie takie, jest klasyfikowane jako złe przez mechanizmy samego portalu 6obcy i prawdopodobnie szybko skończy się shadow-banem.</p>
+  </div>
+  <div class="section">
+    <div class="sectionHeader btn">Czy można coś zrobić żeby captcha działała lepiej?</div>
+    <div class="sectionContent">
+        <p>Tak! Możesz brać czynny udział w rozwoju modelu do rozwiązywania captchy na 2 sposoby:</p>
+        <ol>
+          <li>
+            <p>Włączając w ustawieniach opcję wysyłania napotkanych captchy</p>
+            <img src="img/captcha_feed.png">
+          </li>
+          <li>
+            <p>Rozwiązując captche, których nie udało się rozwiązać botowi. Możesz to zrobić wchodząc w zakładkę "ML" w menu</p>
+            <img src="img/captcha_icon.png">
+          </li>
+        </ol>
+        <p>Uwaga: aby skorzystać z efektów powyższych działań, przełącz model na "Community"</p>
+        <img src="img/captcha_model_community.png">
+        <br>
+  </div>
+
+  <p class="footer">
+    6bot by chaueq
+    <br>
+    Dołącz do <a target="_blank" href="https://discord.gg/8F3RnX7bjm">serwera discord</a> aby zgłaszać problemy i decydować o rozwoju 6bota 😉
+  </p>
+
+  <script src="faq.js"></script>
+</body>
+
+</html>

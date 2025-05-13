@@ -1,0 +1,163 @@
+:root {
+    --background: rgb(10, 10, 10);
+    --inactive-bg: rgb(48, 51, 53);
+    --inactive-border: rgb(60, 63, 66);
+    --text: rgb(240, 240, 240);
+    --text-highlight: #DCB000;
+    --active-bg: #182E44;
+    --active-border: #DCB000;
+}
+
+body {
+    background-color: var(--background);
+    text-align: center;
+    color: var(--text);
+    overflow: hidden;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    width: 100vw;
+    height: 95vh;
+}
+
+p.footer,p.footer>a{
+    color:#DCB000;
+    font-size: 2ch;
+    height: 5vh;
+}
+
+.arch {
+    width: calc(50vw - 2px);
+    float: left;
+    height: 95vh;
+    overflow: hidden;
+    background-color: var(--inactive-bg);
+    border: 1px solid var(--inactive-border);
+}
+
+.arch_header {
+    height: 10vh;
+    padding-top: .5vh;
+    padding-bottom: .5vh;
+    background-color: var(--active-bg);
+    overflow: hidden;
+}
+
+.arch_header_title {
+    height: 6vh;
+    font-size: 4vh;
+    line-height: 6vh;
+    color: var(--text-highlight);
+}
+
+.arch_header_desc {
+    height: 3vh;
+    font-size: 1.5vh;
+    line-height: 3vh;
+    color: var(--text);
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.arch_content {
+    height: 85vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.header {
+    color:#DCB000;
+}
+
+.record {
+    border: 1px solid var(--inactive-border);
+    height: 4vh;
+    font-size: 2vh;
+    line-height: 4vh;
+    overflow: hidden;
+}
+
+.rec_cell {
+    float: left;
+    width: 25%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.rec_act {
+    float: left;
+    width: 33%;
+}
+
+.rec_act,
+.btn{
+    user-select: none;
+    cursor: pointer;
+}
+
+.popup {
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+    top: calc(40vh - .5vmin);
+    left: calc(40vw - .5vmin);
+    background-color: var(--active-bg);
+    border: .25vmin solid var(--active-border);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 1vmin;
+}
+
+.popup_text {
+    width: 100%;
+    height: 7vh;
+    line-height: 7vh;
+    font-size: 2.5vh;
+    overflow: hidden;
+}
+
+input.popup_name {
+    background-color: var(--background);
+    color: var(--active-border);
+    height: 4vh;
+    font-size: 2vh;
+    width: 12.5vw;
+}
+
+.btn {
+    width: 8.25vw;
+    height: 5vh;
+    position: absolute;
+    bottom: 1vh;
+    border: 1px solid;
+    line-height: 5vh;
+    font-size: 2vh;
+    background-color: var(--background);
+}
+
+.popup_cancel {
+    color: #f0a0a0;
+    border-color: #f0a0a0;
+    left: 1vw;
+}
+
+.popup_cancel:hover {
+    background-color: #f0a0a0;
+    color: var(--background);
+}
+
+.popup_submit {
+    color: #a0f0a0;
+    border-color: #a0f0a0;
+    right: 1vw;
+}
+
+.popup_submit:hover {
+    background-color: #a0f0a0;
+    color: var(--background);
+}

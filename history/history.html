@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>6bot - Historia</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="history.css">
+  <title></title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="arch">
+      <div class="arch_header">
+        <div class="arch_header_title">Zapisane</div>
+        <div class="arch_header_desc">Te rozmowy pozostaną w pamięci przeglądarki dopóki ich nie usuniesz</div>
+      </div>
+      <div class="record header">
+        <div class="rec_cell rec_name">Nazwa</div>
+        <div class="rec_cell rec_time">Czas trwania</div>
+        <div class="rec_cell rec_msgs">Ilość wiadomości</div>
+        <div class="rec_cell rec_acts">Akcje</div>
+      </div>
+      <div id="arch_permanent" class="arch_content"></div>
+    </div>
+    <div class="arch">
+      <div class="arch_header">
+        <div class="arch_header_title">Auto-zapis</div>
+        <div class="arch_header_desc">Tu trafiają wszystkie nowe rozmowy i są usuwane automatycznie (zgodnie z ustawieniami)</div>
+      </div>
+      <div class="record header">
+        <div class="rec_cell rec_name">Czas rozpoczęcia</div>
+        <div class="rec_cell rec_time">Czas trwania</div>
+        <div class="rec_cell rec_msgs">Ilość wiadomości</div>
+        <div class="rec_cell rec_acts">Akcje</div>
+      </div>
+      <div id="arch_temporary" class="arch_content"></div>
+    </div>
+  </div>
+
+  <p class="footer">
+    6bot by chaueq
+    <br>
+    Dołącz do <a target="_blank" href="https://discord.gg/8F3RnX7bjm">serwera discord</a> aby zgłaszać problemy i decydować o rozwoju 6bota 😉
+  </p>
+
+  <script src="../lib/data.js"></script>
+  <script src="../lib/history.js"></script>
+
+  <script src="history.js"></script>
+</body>
+
+</html>
